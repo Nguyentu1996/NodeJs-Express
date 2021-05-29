@@ -3,7 +3,7 @@ import express from 'express';
 import errorHandler from './helper/errorhandler';
 import cors from 'cors';
 const app = express()
-const port = (4000 || process.env.PORT)
+const port = ( process.env.PORT || 4000 )
 
 // app.use(cors());
 
@@ -38,7 +38,7 @@ app.use('/user', require('./User/controler'));
 // global error handler
 app.use(errorHandler);
 
-app.listen(port, () => {
+app.listen(port,"0.0.0.0", () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
 
