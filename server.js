@@ -3,7 +3,7 @@ import express from 'express';
 import errorHandler from './helper/errorhandler';
 import cors from 'cors';
 const app = express()
-const port = 4000
+const port = (4000 || process.env.PORT)
 
 // app.use(cors());
 
